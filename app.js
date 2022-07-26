@@ -1,4 +1,4 @@
-const cardArray = [
+const cardsArray = [
     {
         name: 'fries',
         img: 'images/fries.png',
@@ -97,7 +97,7 @@ const cardArray = [
     },
 ];
 
-cardArray.sort(() => 0.5 - Math.random());
+cardsArray.sort(() => 0.5 - Math.random());
 
 const gridDisplay = document.querySelector('#grid');
 const resultDispaly = document.querySelector('#result');
@@ -106,7 +106,7 @@ let cardsChosenIds = [];
 const cardsWon = [];
 
 function createBoard () {
-    for (let i = 0; i < cardArray.length; i++) {
+    for (let i = 0; i < cardsArray.length; i++) {
         const card = document.createElement('img');
         card.setAttribute('src', 'images/blank5.png');
         card.setAttribute('data-id', i);
@@ -144,16 +144,16 @@ function checkMatch() {
     cardsChosen = [];
     cardsChosenIds = [];
 
-    if (cardsWon.length === cardArray.length/2) {
-        resultDispaly.innerHTML = 'Congratulations! You found them all';
+    if (cardsWon.length === cardsArray.length/2) {
+        resultDispaly.innerHTML = 'You win!';
     }
 }
 
 function flipCard () {
     const cardId = this.getAttribute('data-id');
-    cardsChosen.push(cardArray[cardId].name);
+    cardsChosen.push(cardsArray[cardId].name);
     cardsChosenIds.push(cardId);
-    this.setAttribute('src', cardArray[cardId].img);
+    this.setAttribute('src', cardsArray[cardId].img);
 
     if (cardsChosen.length === 2) {
         setTimeout(checkMatch, 500);
