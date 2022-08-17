@@ -8,8 +8,6 @@ body * {
 }
 
 body {
-    /* font-family: 'Londrina Shadow', cursive; */
-    /* font-family: 'Londrina Sketch', cursive; */
     font-family: 'Londrina Solid', cursive;
     width: 100vw;
     height: 100vh;
@@ -23,7 +21,6 @@ body {
 header {
     width: 100%;
     height: 15vh;
-    /* background-color: #40b6ff; */
     background: #A1E0FF;
     background: -moz-radial-gradient(center, #A1E0FF 0%, #41B6FF 100%, #78CEFF 100%);
     background: -webkit-radial-gradient(center, #A1E0FF 0%, #41B6FF 100%, #78CEFF 100%);
@@ -39,8 +36,6 @@ h1 {
     font-size: 47px;
     letter-spacing: 1.5px;
     padding: 20px 10px;
-    /* font-weight: 300;
-    color: rgb(42, 207, 207); */
     color: orange;
     position: relative;
 }
@@ -63,7 +58,7 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 3vw;
+    gap: 7vw;
 }
 
 #score {
@@ -72,14 +67,14 @@ main {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 346px;
-    height: 520px;
+    width: 292px;
+    height: 100%;
     background-image: url(images/bg.jpg);
     background-color: #ffda22;
     background-repeat: no-repeat;
     background-position: left;
     background-size: contain;
-    box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.15);
+    /* box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.15); */
 }
 
 h3 {
@@ -129,7 +124,7 @@ h3 {
 
 footer {
     width: 100%;
-    height: 10vh;
+    height: 5vh;
     display: flex;
     align-items: center;
     padding: 20px;
@@ -153,6 +148,8 @@ footer {
         width: 265px;
         margin-right: 20px;
         height: 397px;
+        box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.15);
+
     }
 }
 @media(max-width: 910px) {
@@ -163,6 +160,8 @@ footer {
         width: 185px;
         margin-right: 20px;
         height: 277px;
+        box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.15);
+
     }
     h3 {
         font-size: 30px;
@@ -182,7 +181,7 @@ footer {
 @media(max-width: 650px) {
     #grid {
         width: 286px;
-        height: 90%;
+        /* height: 90%; */
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -195,14 +194,14 @@ footer {
         padding: 10px;
         flex-direction: column;
         align-items: center;
-        height: 75vh;
+        height: 78vh;
     }
     #score {
         background-position: top;
         background-size: cover;
         width: 280px;
         margin: 0;
-        max-height: 160px;
+        height: 160px;
         box-shadow: 0px 0px 12px 1px rgba(0,0,0,0.15);
     }
     h3 {
